@@ -6,3 +6,21 @@ private void OnCollisionEnter(Collision collidedVastuvu)
     Destroy(collidedVastuvu.gameObject);
   }
 }
+
+//Instantiant
+
+public class SpawnObject : MonoBehaviour
+{
+  public GameObject ball;
+  public Transform spawnPoint;
+
+  void Update()
+  {
+  
+  }
+
+  void SpawnObject()
+  {
+    Instantiate(ball,spawnPoint.position, Quaternion.identity)
+  }
+}
